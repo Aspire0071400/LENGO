@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "245121228821",
+    "project_id": "lengo-a8da5",
+    "storage_bucket": "lengo-a8da5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245121228821:android:735f5f02e30c17ecef6e1c",
+        "android_client_info": {
+          "package_name": "com.uniix.lengo_chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245121228821-kifslnv9qi78ip4nq04ovs5gjrgjmduk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uniix.lengo_chatapp",
+            "certificate_hash": "e4f90c4790a5457737eaddbfb8dfc6b46d80afe1"
+          }
+        },
+        {
+          "client_id": "245121228821-3kcki5qjlvc908ibvru635dblt6c03b1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKKuddYXTquhPZ0d9BZ6YKBkzwPuXXo1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245121228821-3kcki5qjlvc908ibvru635dblt6c03b1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

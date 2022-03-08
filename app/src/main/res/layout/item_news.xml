@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/gray_light"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
+
+        <!--<View
+            android:id="@+id/viewColorTagNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/newsImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/news"
+                android:scaleType="centerCrop"
+                android:src="@color/bluish_black" />
+
+            <TextView
+                android:id="@+id/newsHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/newsImage"
+                android:layout_margin="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:padding="4dp"
+                android:text="@string/news_heading"
+                android:textColor="@color/bluish_black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/newsSubHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/newsHeading"
+                android:layout_margin="4dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:padding="4dp"
+                android:text="@string/news_sub_heading"
+                android:textColor="@color/bluish_black" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

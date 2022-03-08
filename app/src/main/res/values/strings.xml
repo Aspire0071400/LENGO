@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">LENGOchatApp</string>
+    <string name="chats">Chats</string>
+    <string name="people">People</string>
+    <string name="lengo">LENGO</string>
+    <string name="verify_your_number">Verify Your Number</string>
+    <string name="please_enter_your_mobile_number_you_will_get_a_sms_including_a_verification_code">Please enter your mobile number. You will get a SMS including a verification code.</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="next">next</string>
+    <string name="verify_number_hint">Please enter your mobile number. You will get a SMS including a verification code.</string>
+    <string name="resend_sms">Resend SMS</string>
+    <string name="verify">Verify</string>
+    <string name="enter_6_digit_code">Enter 6-digit code</string>
+    <string name="hint">------</string>
+    <string name="verify_otp_details">Waiting to automatically detect an SMS sent to\n +919818170957 Wrong Number?</string>
+    <string name="waiting_text">Waiting to automatically detect an SMS sent to\n %s Wrong Number?</string>
+    <string name="verify_number">Verify %s</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="like_message">Like message</string>
+    <string name="seconds_remaining">"Seconds remaining: %d"</string>
+    <string name="type_your_name_here">Type your name here</string>
+    <string name="please_provided_your_details_and_an_profile_photo">Please provided your details and an profile photo</string>
+    <string name="profile_info">Profile Info</string>
+    <string name="select_your_dob_here">Click here to select your DOB</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="others">Others</string>
+    <string name="gender">Gender</string>
+    <string name="search">Search</string>
+    <string name="type_your_message">Type your message</string>
+    <string name="history">History</string>
+    <string name="task_title">Task Title</string>
+    <string name="enter_task_title">Enter Task title</string>
+    <string name="what_is_to_be_done">What is to be done?</string>
+    <string name="enter_your_task">Enter your Task</string>
+    <string name="set_reminder_date_and_time">Set reminder date and time</string>
+    <string name="set_date">Set Date</string>
+    <string name="set_time">Set Time</string>
+    <string name="save_task">Save Task</string>
+    <string name="profile">Profile</string>
+    <string name="time_table">Time Table</string>
+    <string name="logout">Logout</string>
+    <string name="submit">Submit</string>
+    <string name="your_status">Your status</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="name">Name</string>
+    <string name="dob">DOB</string>
+    <string name="status">Status</string>
+    <string name="cancel">Cancel</string>
+    <string name="what_do_you_want">What do you want?</string>
+    <string name="send_message">Send Message</string>
+    <string name="view_profile">View Profile</string>
+    <string name="category">Category</string>
+    <string name="news">News</string>
+    <string name="books">Books</string>
+    <string name="help">Help</string>
+    <string name="group_video_call">Group Video Call</string>
+    <string name="news_heading">News Heading</string>
+    <string name="news_sub_heading">News Sub Heading</string>
+    <string name="title">Title</string>
+    <string name="sub_description">Sub-Description</string>
+    <string name="content">Content</string>
+    <string name="read_full_news">Read full news</string>
+    <string name="book_title">Book Title</string>
+    <string name="publisher">Publisher</string>
+    <string name="page_count">Page count</string>
+    <string name="date">Date</string>
+    <string name="search_here">Search Here</string>
+    <string name="number_of_pages">Number of Pages</string>
+    <string name="publish_date">Publish Date</string>
+    <string name="sub_title">Sub-Title</string>
+    <string name="description">Description</string>
+    <string name="buy">Buy</string>
+    <string name="preview">Preview</string>
+    <string name="start">Start</string>
+    <string name="join">Join</string>
+    <string name="enter_the_security_code_here">Enter the security code here</string>
+    <string name="hint_video_call">Enter your the code with your friends to start video call. \nOR\nEnter the code provided by your friend to join video call.</string>
+    <string name="time">Time</string>
+    <string name="heading">Help and Instructions</string>
+    <string name="contents">
+        1. You need to create an account using your phone number and fill all
+        the details in the profile form, only then you will be able to move ahead. \n\n<br /><br />
+        2. After creating profile you can see your profile in profile section
+        as well as you can edit your profile. \n\n<br /><br />
+        3. You can also manage your time table in time table section and
+        can remove the tasks if done or not required. \n\n<br /><br />
+        4. You can also read the latest news from the news section with different categories. \n\n<br /><br />
+        5. You can also search and read the books. \n<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;-> You can read books in chrome and as well in app itself ,
+            but Chrome is recommended if screen size is small and you can go with app if the screen size is big enough. \n<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;-> You can also buy books by clicking on buy option,
+            it will redirect you to the google play store book purchase screen. \n\n<br /><br />
+        6. You can also enjoy the group video call option,
+            it is almost similar to a meeting as it have almost all the features like a meeting. \n<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;-> You have to enter your security code to start a meeting
+            which is the app name \"Clique\" along with your phone number including \"+91\" e.g., Clique+91XXXXXXXXXX
+            and share it with your friends so that they can join your meeting room. \n<br />
+            &#160;&#160;&#160;&#160;&#160;&#160;&#160;-> You have to enter the security code to join a meeting
+            as provided by your friend. \n\n<br /><br />
+        7. You can see the list of all the users of the app in people section and can see their profiles via
+        clicking on the photo icon(in the list) and can chat with them via clicking on a particular person(List item). \n\n<br /><br />
+        8. You can like your friend's message by double clicking the message
+        and can copy the message just by long clicking on it. \n\n<br /><br />
+
+        Hope you enjoy the LENGO"
+    </string>
+</resources>

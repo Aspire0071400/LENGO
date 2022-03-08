@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.uniix.lengo_chatapp">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LENGOchatApp">
+        <activity
+            android:name=".books.BookReadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".books.BookDetailsReadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".news.NewsReadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".news.NewsDetailsReadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".news.NewsDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interaction.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interaction.OthersProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interaction.HelpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interaction.GroupVideoCallingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interaction.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragments.ChatsFragment"
+            android:exported="false" />
+        <activity
+            android:name=".auth.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
