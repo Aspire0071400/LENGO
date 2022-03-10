@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "245121228821",
+    "firebase_url": "https://lengo-a8da5-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "lengo-a8da5",
     "storage_bucket": "lengo-a8da5.appspot.com"
   },
@@ -14,7 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "245121228821-kifslnv9qi78ip4nq04ovs5gjrgjmduk.apps.googleusercontent.com",
+          "client_id": "245121228821-k1cre7bie9r96dcfo80ldvo3e74jpfk0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.uniix.lengo_chatapp",

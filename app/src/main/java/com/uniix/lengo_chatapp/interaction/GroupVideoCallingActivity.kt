@@ -10,6 +10,9 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.uniix.lengo_chatapp.MainActivity
 import com.uniix.lengo_chatapp.R
 import com.uniix.lengo_chatapp.databinding.ActivityGroupVideoCallingBinding
+import org.jitsi.meet.sdk.JitsiMeet
+import org.jitsi.meet.sdk.JitsiMeetActivity
+import org.jitsi.meet.sdk.JitsiMeetConferenceOptions
 import java.net.MalformedURLException
 import java.net.URL
 

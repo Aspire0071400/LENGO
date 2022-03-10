@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
@@ -20,6 +21,10 @@ import com.uniix.lengo_chatapp.interaction.ChatActivity
 import com.uniix.lengo_chatapp.models.User
 import com.uniix.lengo_chatapp.viewholders.EmptyViewHolder
 import com.uniix.lengo_chatapp.viewholders.UsersViewHolder
+import com.firebase.ui.database.FirebaseRecyclerAdapter
+import com.firebase.ui.database.FirebaseRecyclerOptions
+
+
 
 private const val DELETED_VIEW_TYPE = 1
 private const val NORMAL_VIEW_TYPE = 2
@@ -27,7 +32,7 @@ private const val NORMAL_VIEW_TYPE = 2
 class PeopleFragment:Fragment() {
 
     private lateinit var peopleFragment: FragmentChatsBinding
-    private lateinit var mAdapter: FirestorePagingAdapter<User, RecyclerView.ViewHolder>
+    private lateinit var mAdapter: FirestorePagingAdapter<User, ViewHolder>
     private lateinit var viewManager: RecyclerView.LayoutManager
     private val database = FirebaseFirestore.getInstance().collection("users")
         .orderBy("name", Query.Direction.ASCENDING)
@@ -61,11 +66,11 @@ class PeopleFragment:Fragment() {
             .build()
 
         // Instantiate Paging Adapter
-        mAdapter = object : FirestorePagingAdapter<User, RecyclerView.ViewHolder>(options) {
+        mAdapter = object : FirestorePagingAdapter<User, ViewHolder>(options) {
             override fun onCreateViewHolder(
                 parent: ViewGroup,
                 viewType: Int
-            ): RecyclerView.ViewHolder {
+            ): ViewHolder {
                 val inflater = layoutInflater
                 return when (viewType) {
                     NORMAL_VIEW_TYPE -> {
@@ -76,7 +81,7 @@ class PeopleFragment:Fragment() {
             }
 
             override fun onBindViewHolder(
-                viewHolder: RecyclerView.ViewHolder,
+                viewHolder: ViewHolder,
                 position: Int,
                 user: User
             ) {
