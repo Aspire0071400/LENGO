@@ -10,11 +10,10 @@ data class User(
     val phoneNumber: String,
     val deviceToken: String,
     val status: String,
-    val online: Boolean
 ) {
     //Empty [Constructor] for Firebase
     constructor() :
-            this("", "", "", "", "", "", "", "", "Hey There, I am using CLIQUE", false)
+            this("", "", "", "", "", "", "", "", "Hey There, I am using CLIQUE")
 
     constructor(
         name: String,
@@ -34,7 +33,6 @@ data class User(
                 gender = gender,
                 phoneNumber = phoneNumber,
                 "",
-                status = "Hey There, I am using CLIQUE",
-                online = false
+                status = "Hey There, I am using CLIQUE"
             )
 }

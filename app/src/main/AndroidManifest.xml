@@ -44,9 +44,7 @@
         <activity
             android:name=".interaction.ChatActivity"
             android:exported="false" />
-        <activity
-            android:name=".fragments.ChatsFragment"
-            android:exported="false" />
+
         <activity
             android:name=".auth.SignUpActivity"
             android:exported="false" />

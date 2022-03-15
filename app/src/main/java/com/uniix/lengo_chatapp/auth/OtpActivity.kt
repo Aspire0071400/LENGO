@@ -18,16 +18,12 @@ import androidx.core.view.isVisible
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-import com.google.firebase.auth.PhoneAuthCredential
-import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.auth.*
 import com.uniix.lengo_chatapp.MainActivity
 import com.uniix.lengo_chatapp.R
 import com.uniix.lengo_chatapp.databinding.ActivityOtpBinding
 import java.util.concurrent.TimeUnit
 
-const val PHONE_NUMBER = "phoneNumber"
 
 class OtpActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var otpActivity: ActivityOtpBinding
@@ -38,12 +34,14 @@ class OtpActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var progressDialog: ProgressDialog
     private var mCounterDown: CountDownTimer? = null
     private var timeLeft: Long = -1
+    private lateinit var auth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         otpActivity = ActivityOtpBinding.inflate(layoutInflater)
         setContentView(otpActivity.root)
-
+        auth = FirebaseAuth.getInstance()
         initView()
         startVerify()
 
@@ -57,7 +55,7 @@ class OtpActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun initView() {
-        phoneNumber = intent.getStringExtra(PHONE_NUMBER)
+        phoneNumber = intent.getStringExtra("PHONE_NUMBER")
         otpActivity.verify.text = getString(R.string.verify_number, phoneNumber)
         setSpannableString()
 
@@ -184,7 +182,7 @@ class OtpActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun showSignUpActivity() {
         val intent = Intent(this, SignUpActivity::class.java)
-        intent.putExtra(USER_PHONE_NUMBER, phoneNumber)
+        intent.putExtra("PHONE_NUMBER", phoneNumber)
         startActivity(intent)
         finish()
     }
@@ -197,27 +195,29 @@ class OtpActivity : AppCompatActivity(), View.OnClickListener {
 
     // This method will send a code to a given phone number as an SMS
     private fun startPhoneNumberVerification(phoneNumber: String) {
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-            phoneNumber,        // Phone number to verify
-            60,          // Timeout duration
-            TimeUnit.SECONDS,   // Unit of timeout
-            this,         // Activity (for callback binding)
-            callbacks
-        ) // OnVerificationStateChangedCallbacks
+        val option = PhoneAuthOptions.newBuilder(auth)
+        .setPhoneNumber(phoneNumber)
+            .setTimeout(60L, TimeUnit.SECONDS)
+            .setActivity(this)
+            .setCallbacks(callbacks)
+            .build()
+        PhoneAuthProvider.verifyPhoneNumber(option)
+        // OnVerificationStateChangedCallbacks
     }
 
     private fun resendVerificationCode(
         phoneNumber: String,
-        mResendToken: PhoneAuthProvider.ForceResendingToken?
+        mResendToken: PhoneAuthProvider.ForceResendingToken
     ) {
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-            phoneNumber,       // Phone number to verify
-            60,         // Timeout duration
-            TimeUnit.SECONDS,  // Unit of timeout
-            this,        // Activity (for callback binding)
-            callbacks,         // OnVerificationStateChangedCallbacks
-            mResendToken
-        ) // ForceResendingToken from callbacks
+        val option = PhoneAuthOptions.newBuilder(auth)
+            .setPhoneNumber(phoneNumber)
+            .setTimeout(60L, TimeUnit.SECONDS)
+            .setActivity(this)
+            .setCallbacks(callbacks)
+            .setForceResendingToken(mResendToken)
+            .build()
+        PhoneAuthProvider.verifyPhoneNumber(option)
+// ForceResendingToken from callbacks
     }
 
     private fun showTimer(milliesInFuture: Long) {
@@ -255,7 +255,7 @@ class OtpActivity : AppCompatActivity(), View.OnClickListener {
             }
             otpActivity.resend -> {
                 if (mResendToken != null) {
-                    resendVerificationCode(phoneNumber.toString(), mResendToken)
+                    resendVerificationCode(phoneNumber.toString(), mResendToken!!)
                     showTimer(60000)
                     progressDialog = createProgressDialog("Sending a verification code", false)
                     progressDialog.show()
@@ -273,7 +273,7 @@ class OtpActivity : AppCompatActivity(), View.OnClickListener {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putLong("timeLeft", timeLeft)
-        outState.putString(PHONE_NUMBER, phoneNumber)
+        outState.putString("PHONE_NUMBER", phoneNumber)
     }
 
     override fun onDestroy() {

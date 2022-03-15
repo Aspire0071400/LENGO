@@ -44,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
                                 tools:ccp_contentColor="#fcfdfd"
                                 tools:ccp_textSize="20dp" /> */
 
-        phoneNumber = countryCode + loginActivity.phoneNumber.text.toString()
+        phoneNumber = "+91" + loginActivity.phoneNumber.text.toString()
 
         if (validatePhoneNumber(loginActivity.phoneNumber.text.toString())) {
             notifyUserBeforeVerify(
@@ -82,7 +82,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun showLoginActivity() {
-        startActivity(Intent(this, OtpActivity::class.java).putExtra(PHONE_NUMBER, phoneNumber))
+        startActivity(Intent(this, OtpActivity::class.java).putExtra("PHONE_NUMBER", phoneNumber))
         finish()
     }
 }

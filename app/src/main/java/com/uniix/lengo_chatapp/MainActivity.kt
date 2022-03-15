@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -16,7 +17,6 @@ import com.uniix.lengo_chatapp.interaction.GroupVideoCallingActivity
 import com.uniix.lengo_chatapp.interaction.HelpActivity
 import com.uniix.lengo_chatapp.interaction.ProfileActivity
 import com.uniix.lengo_chatapp.news.NewsReadingActivity
-import com.uniix.lengo_chatapp.todolist.ToDoActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mainActivity : ActivityMainBinding
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.todo -> {
-                todo()
+                Toast.makeText(this, "hello ji", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.newsImage -> {
@@ -88,9 +88,9 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, ProfileActivity::class.java))
     }
 
-    private fun todo() {
+   /* private fun todo() {
         startActivity(Intent(this, ToDoActivity::class.java))
-    }
+    }*/
 
     private fun newsReader() {
         startActivity(Intent(this, NewsReadingActivity::class.java))

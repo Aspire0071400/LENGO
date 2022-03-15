@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="logo" type="id">splash_img</item>
-    <item name="TextView" type="id">splash_text</item>
-    <item name="progressBar" type="id">splash_load</item>
-    <item name="home" type="id"/>
-</resources>

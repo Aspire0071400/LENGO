@@ -44,15 +44,6 @@ class BookDetailsReadingActivity : AppCompatActivity() {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.home -> {
-                onBackPressed()
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
     override fun onBackPressed() {
         if (bookDetailsReadingActivity.webView.canGoBack()) {
             bookDetailsReadingActivity.webView.goBack()

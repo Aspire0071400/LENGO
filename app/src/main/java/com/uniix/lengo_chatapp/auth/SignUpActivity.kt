@@ -24,7 +24,6 @@ import com.uniix.lengo_chatapp.databinding.ActivitySignUpBinding
 import com.uniix.lengo_chatapp.models.User
 import java.util.*
 
-const val USER_PHONE_NUMBER = "USER_PHONE_NUMBER"
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -43,7 +42,7 @@ class SignUpActivity : AppCompatActivity() {
         signUpActivity = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(signUpActivity.root)
 
-        userPhoneNumber = intent.getStringExtra(USER_PHONE_NUMBER).toString()
+        userPhoneNumber = intent.getStringExtra("PHONE_NUMBER").toString()
 
         signUpActivity.userImage.setOnClickListener {
             checkPermissionForImage()

@@ -1,6 +1,5 @@
 package com.uniix.lengo_chatapp.fragments
 
-import android.arch.paging.PagedList
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -9,9 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.paging.PagedList
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.firebase.ui.firestore.paging.FirestorePagingAdapter
+import com.firebase.ui.firestore.paging.FirestorePagingOptions
+import com.firebase.ui.firestore.paging.LoadingState
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
@@ -21,9 +24,6 @@ import com.uniix.lengo_chatapp.interaction.ChatActivity
 import com.uniix.lengo_chatapp.models.User
 import com.uniix.lengo_chatapp.viewholders.EmptyViewHolder
 import com.uniix.lengo_chatapp.viewholders.UsersViewHolder
-import com.firebase.ui.database.FirebaseRecyclerAdapter
-import com.firebase.ui.database.FirebaseRecyclerOptions
-
 
 
 private const val DELETED_VIEW_TYPE = 1
