@@ -60,10 +60,6 @@ class MainActivity : AppCompatActivity() {
                 profile()
                 true
             }
-            R.id.todo -> {
-                Toast.makeText(this, "hello ji", Toast.LENGTH_SHORT).show()
-                true
-            }
             R.id.newsImage -> {
                 newsReader()
                 true

@@ -146,7 +146,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/logo"
+                android:id="@+id/logoz"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="85dp"
@@ -174,7 +174,7 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/logo"
+                app:layout_constraintStart_toEndOf="@+id/logoz"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
                 app:layout_constraintVertical_bias="0.9" />
 

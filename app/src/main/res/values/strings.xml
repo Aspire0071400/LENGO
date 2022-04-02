@@ -86,6 +86,31 @@
     <string name="hint_video_call">Enter your the code with your friends to start video call. \nOR\nEnter the code provided by your friend to join video call.</string>
     <string name="time">Time</string>
     <string name="heading">Help and Instructions</string>
-    <string name="contents">Content</string>
+    <string name="help_instructions"><![CDATA["
+    1. You need to create an account using your phone number and fill all the details in the profile form, only then you will be able to move ahead.
+
+    2. After creating profile you can see your profile in profile section as well as you can edit your profile.
+
+    3. You can also manage your time table in time table section and can remove the tasks if done or not required.
+
+    4. You can also read the latest news from the news section with different categories.
+
+    5. You can also search and read the books.
+
+                  -> You can read books in chrome and as well in app itself ,but Chrome is recommended if screen size is small and you can go with app if the screen size is big enough.
+
+                  -> You can also buy books by clicking on buy option,it will redirect you to the google play store book purchase screen.
+
+    6. You can also enjoy the group video call option,it is almost similar to a meeting as it have almost all the features like a meeting.
+
+                  -> You have to enter your security code to start a meeting which is the app name \"LENGO\" along with your phone number including \"+91\" e.g., LENGO+91XXXXXXXXXX and share it with your friends so that they can join your meeting room.
+
+                  -> You have to enter the security code to join a meeting as provided by your friend.
+
+    7. You can see the list of all the users of the app in people section and can see their profiles via clicking on the photo icon(in the list) and can chat with them via clicking on a particular person(List item).
+
+    8. You can like your friend's message by double clicking the message and can copy the message just by long clicking on it.
+
+     Hope you enjoy the LENGO\""]]></string>
 
 </resources>

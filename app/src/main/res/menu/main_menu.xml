@@ -13,10 +13,6 @@
         android:title="@string/profile"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/todo"
-        android:title="@string/time_table"
-        app:showAsAction="never" />
 
     <item
         android:id="@+id/newsImage"

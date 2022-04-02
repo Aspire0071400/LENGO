@@ -103,7 +103,7 @@ class BookDetailsActivity : AppCompatActivity() {
         //Instantiate builder variable
         val builder = AlertDialog.Builder(view.context)
         // set title
-        builder.setTitle("CLIQUE")
+        builder.setTitle("LENGO")
         //set content area
         builder.setMessage("Want to preview the book in: -")
         //set negative button

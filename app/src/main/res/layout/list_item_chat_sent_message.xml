@@ -23,11 +23,10 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView3"
-        android:layout_width="75dp"
-        android:layout_height="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:elevation="0dp"
-        app:cardBackgroundColor="#8452EA"
-        app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1"
@@ -35,28 +34,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearance="@style/ChatShapeApperance">
 
-
-        <TextView
-            android:id="@+id/time"
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/f"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="top|right"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="#A6FFFFFF"
-            android:textSize="7sp"
-            tools:ignore="SmallSp"
-            tools:text="12:00 AM" />
+            android:padding="8dp"
+            app:alignItems="flex_end"
+            app:flexWrap="wrap"
+            app:justifyContent="flex_end">
 
-        <TextView
-            android:id="@+id/content"
-            android:layout_width="61dp"
-            android:layout_height="wrap_content"
-            android:lineSpacingExtra="5dp"
-            android:textAlignment="gravity"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            tools:text="Hello" />
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                tools:text="Hello" />
 
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textColor="#A6ffffff"
+                android:textSize="14sp"
+                tools:text="12:00 AM" />
+
+        </com.google.android.flexbox.FlexboxLayout>
 
     </com.google.android.material.card.MaterialCardView>
 

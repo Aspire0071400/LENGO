@@ -84,7 +84,7 @@ class GroupVideoCallingActivity : AppCompatActivity() {
         database.collection("users").document(auth.uid!!).get().addOnSuccessListener {
             if (it.exists()) {
                 if (auth.uid == it.get("uid")) {
-                    appName = "Clique"
+                    appName = "LENGO"
                     phoneNumber = it.getString("phoneNumber").toString()
                     tokenCode = appName + phoneNumber
                 }

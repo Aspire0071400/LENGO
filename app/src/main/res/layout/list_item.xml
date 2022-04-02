@@ -43,7 +43,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                tools:text="Ankit Singh" />
+                tools:text="Uniix contact" />
 
             <TextView
                 android:id="@+id/timeTv"

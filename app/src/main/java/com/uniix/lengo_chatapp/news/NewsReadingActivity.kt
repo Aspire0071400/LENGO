@@ -106,10 +106,10 @@ class NewsReadingActivity : AppCompatActivity(), CategoryAdapter.CategoryClickIn
         articlesArrayList.clear()
         newsReadingActivity.progressBarNews.visibility = View.VISIBLE
         val url = if (category != "All") {
-            "https://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey=ENTER_YOUR_API_KEY"
+            "https://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey=d8d79d86aef845ddaeae2e564aba8e56"
 
         } else {
-            "https://newsapi.org/v2/top-headlines?country=in&excludeDomains=stackoverflow.com&sortBy=published&language=en&apiKey=ENTER_YOUR_API_KEY"
+            "https://newsapi.org/v2/top-headlines?country=in&excludeDomains=stackoverflow.com&sortBy=published&language=en&apiKey=d8d79d86aef845ddaeae2e564aba8e56"
         }
         val requestQueue: RequestQueue = Volley.newRequestQueue(this)
         requestQueue.cache.clear()

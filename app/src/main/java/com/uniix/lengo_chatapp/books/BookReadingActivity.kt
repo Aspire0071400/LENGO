@@ -53,9 +53,9 @@ class BookReadingActivity : AppCompatActivity() {
         bookInfoArrayList.clear()
         bookReadingActivity.progressBarBooks.visibility = View.VISIBLE
         val url = if (query == "android") {
-            "https://www.googleapis.com/books/v1/volumes?q=android&key=ENTER_YOUR_API_KEY"
+            "https://www.googleapis.com/books/v1/volumes?q=android&key=AIzaSyAWxEAij1GKBh9pccXSOZQH_d-gHjfoDOY"
         } else {
-            "https://www.googleapis.com/books/v1/volumes?q=$query&key=ENTER_YOUR_API_KEY"
+            "https://www.googleapis.com/books/v1/volumes?q=$query&key=AIzaSyAWxEAij1GKBh9pccXSOZQH_d-gHjfoDOY"
         }
         val requestQueue: RequestQueue = Volley.newRequestQueue(this)
         requestQueue.cache.clear()

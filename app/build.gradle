@@ -42,6 +42,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'com.hbb20:ccp:2.6.0'
+    implementation 'com.google.android:flexbox:2.0.1'
 
     implementation 'com.squareup.picasso:picasso:2.71828'
 

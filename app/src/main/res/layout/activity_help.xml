@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:padding="4dp"
-                android:text="@string/contents"
+                android:text="@string/help_instructions"
                 android:textColor="@color/bluish_black"
                 android:textSize="18sp" />
 
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/logo"
+                    android:id="@+id/logoz"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="85dp"
@@ -97,7 +97,7 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/logo"
+                    app:layout_constraintStart_toEndOf="@+id/logoz"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.81" />
 
