@@ -13,7 +13,7 @@ data class User(
 ) {
     //Empty [Constructor] for Firebase
     constructor() :
-            this("", "", "", "", "", "", "", "", "Hey There, I am using CLIQUE")
+            this("", "", "", "", "", "", "", "", "Hey There, I am using LENGOchatApp")
 
     constructor(
         name: String,
@@ -33,6 +33,6 @@ data class User(
                 gender = gender,
                 phoneNumber = phoneNumber,
                 "",
-                status = "Hey There, I am using CLIQUE"
+                status = "Hey There, I am using LENGOchatApp"
             )
 }

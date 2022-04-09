@@ -67,7 +67,7 @@ class GroupVideoCallingActivity : AppCompatActivity() {
             if (groupVideoCallingActivity.codeBox.text.trim().toString().isNotEmpty()) {
                 if (groupVideoCallingActivity.codeBox.text.trim().toString().length == 19
                     && groupVideoCallingActivity.codeBox.text.trim().toString()
-                        .startsWith("Clique+91")
+                        .startsWith("LENGO+91")
                     && groupVideoCallingActivity.codeBox.text.trim().toString() != tokenCode
                 ) {
                     startGroupVideoCall()
