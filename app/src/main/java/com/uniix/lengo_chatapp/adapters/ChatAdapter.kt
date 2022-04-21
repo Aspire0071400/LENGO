@@ -54,6 +54,7 @@ class ChatAdapter(
         }
     }
 
+
     override fun getItemViewType(position: Int): Int {
         return when (val event = list[position]) {
             is Message -> {
